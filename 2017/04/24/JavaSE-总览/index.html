@@ -396,15 +396,17 @@
 <li><p><strong>JDK(Java Development Kit)</strong> : Java 开发工具包，用来开发 Java 程序，它包括了 JRE 和开发所要用到的工具类和工具类 API </p>
 </li>
 <li><p><strong>JRE(Java Runtime Environment) </strong> : Java 运行环境，用来运行 Java 程序，如果只是单纯的想要运行 Java 程序，是不需要 JDK 的。JRE 包含 JVM 与核心类库。</p>
-<p>其中， JDK , JRE , JVM 三者之间的联系如图所示<img src=".\img\JDK 与 JRE 关系图.jpg" alt="JDK 与 JRE 关系图"></p>
+<p>其中， JDK , JRE , JVM 三者之间的联系如图所示<img src="http://upload-images.jianshu.io/upload_images/506482-ad94508b8b5c1b24.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="JDK 与 JRE 关系图"></p>
 </li>
 </ul>
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>Java 是一种静态类型的语言，这意味着我们在使用所有的变量时都必须要对它进行声明和初始化。按照类型分，Java 的数据类型可以分为基本数据类型以及引用数据类型</p>
 <ul>
 <li><p><strong>基本数据类型</strong> ：不需要通过 <code>new</code> 关键字来创建的数据类型，Java 内置八种基本数据类型，如下。</p>
+<p>​</p>
 <p>| 类型      | 字节长度 | 默认值      | 取值范围                          |<br>| :—— | :— | ——– | —————————– |<br>| BYTE    | 1    | 0        | -128 ~ 127                    |<br>| SHORT   | 2    | “”       | -32768 ~ 32767                |<br>| CHAR    | 2    | “\u0000” | “\u0000”(0) ~ “\uffff”(65535) |<br>| INT     | 4    | 0        | $-2^{31}$ ~ $2^{31}-1$        |<br>| LONG    | 8    | 0L       | $-2^{63} $ ~ $ 2^{63}-1$      |<br>| FLOAT   | 4    | 0.0f     | $-2^{31}$ ~ $2^{31}-1$        |<br>| DOUBLE  | 8    | 0.0d     | $-2^{63} $ ~ $ 2^{63}-1$      |<br>| BOOLEAN | 1    | FALSE    | true / false                  |</p>
+<p>​</p>
 </li>
-<li><p><strong>引用数据类型</strong> ： 不能够直接赋值，必须通过变量地址来引用的数据类型，如类、接口、数组都属于引用数据。</p>
+<li><p>引用数据类型** ： 不能够直接赋值，必须通过变量地址来引用的数据类型，如类、接口、数组都属于引用数据。</p>
 </li>
 </ul>
 <h2 id="堆与栈"><a href="#堆与栈" class="headerlink" title="堆与栈"></a>堆与栈</h2><p>当 JVM 在执行 Java 程序时，它会把自己所管理的内存部分划分为 5 个单元，我们统称它们为数据区。</p>
@@ -450,7 +452,7 @@
 <ul>
 <li><strong>异常的分类</strong></li>
 </ul>
-<p><img src=".\img\异常.png" alt="异常的分类"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/506482-682a0fbf2031cd98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="异常的分类"></p>
 <ul>
 <li><p><strong>自定义异常</strong>：自定义异常内部不需要任何实现，只需要实现构造方法即可。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class MyException extends <span class="title">RuntimeExcepiton</span><span class="params">()</span> </span>&#123;</div><div class="line">    MyException(String msg) &#123;</div><div class="line">        <span class="keyword">super</span>(msg);</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -463,11 +465,11 @@
 <p>​</p>
 </li>
 </ul>
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><img src=".\img\转换.png" alt="三者转换"></p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><img src="http://upload-images.jianshu.io/upload_images/506482-bfc3695a7177c9cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三者转换"></p>
 <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合可以说是 Java 语言中最令人兴奋的特性之一了，同样是存储数据，它的作用比一般的数组要强大的多，长度可变，各种富有特性的函数更是让对数据的操作更为便利与简单。</p>
 <ul>
 <li><p>集合继承体系图</p>
-<p><img src=".\img\集合体系.png" alt="集合体系图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/506482-f19bb4d1720e8985.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="集合体系图"></p>
 <ul>
 <li><p><strong>collction</strong> : 属于单列集合的顶级接口，实现类都可以进行 <code>iterator</code> 迭代,线程不安全（<code>Vector</code> 安全）。</p>
 <p>​        |—- <strong>List</strong> : 存取有序。有索引，可包含重复元素。</p>
