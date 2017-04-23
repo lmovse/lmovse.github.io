@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            JavaSE 总览 | 
+        
+        lmovse
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="lmovse">
+    <meta name="description" content="make with love">
+    <meta name="keywords" content="Mouse 翻译">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="lmovse">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://lmovse.info">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="JavaSE 总览 | lmovse">
+    <meta property="og:description" content="make with love">
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #E7EAEB;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Java-SE-总览"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java SE 总览</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JDK-与-JRE"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">JDK 与 JRE</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据类型"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">数据类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#堆与栈"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">堆与栈</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组排序"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">数组排序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关键字"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">关键字</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#封装继承多态"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">封装继承多态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内部类"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">内部类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#异常"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">异常</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类型转换"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">类型转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#集合"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">集合</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IO"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">IO</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线程"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程的创建"><span class="post-toc-number">1.12.1.</span> <span class="post-toc-text">线程的创建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程的控制"><span class="post-toc-number">1.12.2.</span> <span class="post-toc-text">线程的控制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同步锁"><span class="post-toc-number">1.12.3.</span> <span class="post-toc-text">同步锁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程池"><span class="post-toc-number">1.12.4.</span> <span class="post-toc-text">线程池</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络编程"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">网络编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.13.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#InetAddress"><span class="post-toc-number">1.13.2.</span> <span class="post-toc-text">InetAddress</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Socket"><span class="post-toc-number">1.13.3.</span> <span class="post-toc-text">Socket</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UDP"><span class="post-toc-number">1.13.4.</span> <span class="post-toc-text">UDP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP"><span class="post-toc-number">1.13.5.</span> <span class="post-toc-text">TCP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#URL"><span class="post-toc-number">1.13.6.</span> <span class="post-toc-text">URL</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#反射"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">反射</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概述-1"><span class="post-toc-number">1.14.1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy"><span class="post-toc-number">1.14.2.</span> <span class="post-toc-text">Proxy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见实现"><span class="post-toc-number">1.14.3.</span> <span class="post-toc-text">常见实现</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 12 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                JavaSE 总览
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>lmovse</strong>
+        <span>4月 24, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaSE 总览&url=http://lmovse.info//2017/04/24/JavaSE-总览/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JavaSE 总览&url=http://lmovse.info//2017/04/24/JavaSE-总览/index.html&via=lmovse" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://lmovse.info//2017/04/24/JavaSE-总览/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://lmovse.info//2017/04/24/JavaSE-总览/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Java-SE-总览"><a href="#Java-SE-总览" class="headerlink" title="Java SE 总览"></a>Java SE 总览</h1><p>虽然以后要从事的是 Java EE 的开发工作，但作为 ME 和 EE 的基础，SE 的一些重点以及细节的掌握也很重要，这篇文章不会有太多的代码和细节部分，因为文章的目的是总结而不是庖丁解牛般的深究。</p>
+<h2 id="JDK-与-JRE"><a href="#JDK-与-JRE" class="headerlink" title="JDK 与 JRE"></a>JDK 与 JRE</h2><ul>
+<li><p><strong>JDK(Java Development Kit)</strong> : Java 开发工具包，用来开发 Java 程序，它包括了 JRE 和开发所要用到的工具类和工具类 API </p>
+</li>
+<li><p><strong>JRE(Java Runtime Environment) </strong> : Java 运行环境，用来运行 Java 程序，如果只是单纯的想要运行 Java 程序，是不需要 JDK 的。JRE 包含 JVM 与核心类库。</p>
+<p>其中， JDK , JRE , JVM 三者之间的联系如图所示<img src=".\img\JDK 与 JRE 关系图.jpg" alt="JDK 与 JRE 关系图"></p>
+</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>Java 是一种静态类型的语言，这意味着我们在使用所有的变量时都必须要对它进行声明和初始化。按照类型分，Java 的数据类型可以分为基本数据类型以及引用数据类型</p>
+<ul>
+<li><p><strong>基本数据类型</strong> ：不需要通过 <code>new</code> 关键字来创建的数据类型，Java 内置八种基本数据类型，如下。</p>
+<p>| 类型      | 字节长度 | 默认值      | 取值范围                          |<br>| :—— | :— | ——– | —————————– |<br>| BYTE    | 1    | 0        | -128 ~ 127                    |<br>| SHORT   | 2    | “”       | -32768 ~ 32767                |<br>| CHAR    | 2    | “\u0000” | “\u0000”(0) ~ “\uffff”(65535) |<br>| INT     | 4    | 0        | $-2^{31}$ ~ $2^{31}-1$        |<br>| LONG    | 8    | 0L       | $-2^{63} $ ~ $ 2^{63}-1$      |<br>| FLOAT   | 4    | 0.0f     | $-2^{31}$ ~ $2^{31}-1$        |<br>| DOUBLE  | 8    | 0.0d     | $-2^{63} $ ~ $ 2^{63}-1$      |<br>| BOOLEAN | 1    | FALSE    | true / false                  |</p>
+</li>
+<li><p><strong>引用数据类型</strong> ： 不能够直接赋值，必须通过变量地址来引用的数据类型，如类、接口、数组都属于引用数据。</p>
+</li>
+</ul>
+<h2 id="堆与栈"><a href="#堆与栈" class="headerlink" title="堆与栈"></a>堆与栈</h2><p>当 JVM 在执行 Java 程序时，它会把自己所管理的内存部分划分为 5 个单元，我们统称它们为数据区。</p>
+<p><img src="http://img.blog.csdn.net/20160119104827988" alt="JVM 数据区"></p>
+<p>其中，方法区和堆为共享数据区，即在多线程程序中，它们的方法区与堆里面的数据时共享的，而栈空间则为私有的，JVM 在栈空间中执行线程中的方法。</p>
+<ul>
+<li><strong>方法区 Method Area</strong>（共享）：用来保存加载类的类信息，包括类名，类的常量池，还有类中的方法及变量等，当类中含有静态方法或变量时，为静态方法或变量分配内存空间，外界可以直接访问。而不需要 <code>new</code> 出对象来。此外，在加载类时还会在区中生成该类对应的一个 <code>Class</code> 对象。</li>
+<li><strong>堆 Heap</strong>（共享）：堆是 5 个数据单元区中最大的一个单元，它随着 JVM 的启动而创建，所有线程共享，它用于保存类和数组等通过 <code>new</code> 关键词创建出来的实例对象，同时具备内存空间的地址用于栈来访问。在栈中创建的实例对象中的变量或类都具备初始化变量值，引用数据类型默认为 <code>null</code> ，基本数据类型默认为默认类型。</li>
+<li><strong>栈 Stack</strong> （私有）：栈是线程所独有的，每创建一个线程就会随之创建一个对应的栈，它随着线程的启动而创建，线程的销毁而销毁。在栈中创建的对象或变量不具备初始化值，必须手动初始化，否则无法使用。栈的主要作用是用来执行方法，且只能执行位于栈顶的方法，当运行中的方法调用了其他方法时，该方法即进行压栈，调用方法入栈。由于栈的特点，它在运行时可能会出现两个异常： <code>stackoverflow</code> 与  <code>OutOfMemoryError</code>。</li>
+<li><strong>本地方法栈 Native Method Stack</strong>（私有）：也是一种栈，主要用于运行本地系统语言编写的修饰符为 <code>naive</code>的方法。</li>
+<li><strong>程序计数器 Program Counter Register</strong> （私有） ：是 5 个数据单元中内存空间最小的单元，它的作用是指示虚拟机的执行顺序，它的内部根据字节码文件依次保存当前所执行指令的下一条字节码指令的地址。</li>
+</ul>
+<h2 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h2><p>虽然在实际开发中很少用到数组，基本上都是用的集合，但是在某些场合下，数组还是有其不可替代性的，对数组最常见的操作便是排序了，常用的排序算法有选择排序、冒泡排序、 折半查找、快速排序。</p>
+<ul>
+<li><p><strong>选择排序</strong> ：每次比较保存最小值的下标索引，等一次内循环完成后再进行索引值的交换</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> minIndex = <span class="number">0</span>;<span class="comment">// 最小值的下标</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    minIndex = i;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</div><div class="line">        <span class="keyword">if</span> (arr[minIndex] &gt; arr[j]) &#123;</div><div class="line">            minIndex = j;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (minIndex != i) &#123;</div><div class="line">        exch(arr, minIndex, i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>冒泡排序</strong> ：冒泡排序与选择排序的思想是一样的，不过它的实现方式是每次比较后即彼此交换索引值，因此效率比选择排序要低些。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</div><div class="line"> 		<span class="keyword">if</span> (arr[i] &gt; arr[j]) &#123;</div><div class="line"> 			exch(arr, i, j);</div><div class="line">		 &#125;</div><div class="line"> 	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>选择排序</strong> ：选择排序的排序思想是通过不停递归切分来进行排序，保证每次递归排序后产生的切分点的左侧都小于原切分点的索引值，切分点的右侧都大于原切分点的索引值。这种通过不停的切分来进行排序的算法效率远远高于普通的选择排序，是前者的 5~6 倍</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> key, <span class="keyword">int</span> len)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (key &gt;= len) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 获取切分点</span></div><div class="line">    <span class="keyword">int</span> hi = split(arr, key, len);</div><div class="line">    <span class="comment">// 左半部分排序</span></div><div class="line">    quickSort(arr, key, hi - <span class="number">1</span>);</div><div class="line">    <span class="comment">// 右半部分排序</span></div><div class="line">    quickSort(arr, hi + <span class="number">1</span>, len);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">split</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> key, <span class="keyword">int</span> len)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> lo = key, hi = len + <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line"></div><div class="line">    <span class="comment">// 找到最近的一个比 a[key] 大的下标索引，顺序为从左往右</span></div><div class="line">    <span class="keyword">while</span> (arr[++lo] &lt; arr[key]) &#123;</div><div class="line">    	<span class="keyword">if</span> (lo == len) &#123;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 找到最近的一个比 a[key] 小的下标索引，顺序为从右往左</span></div><div class="line">    <span class="keyword">while</span> (arr[key] &lt; arr[--hi]) &#123;</div><div class="line">        <span class="keyword">if</span> (hi == <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 如果在比较的过程中发生 lo &gt;= hi，即可以认为 一次查询已经结束，索引 hi 右侧的元素都大于 a[key]，左侧的元素都小于 a[key]</span></div><div class="line">    <span class="keyword">if</span> (lo &gt;= hi) &#123;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 将两者位置交换，保证索引 ol 左侧的元素都小于 a[key]，索引 hi 右侧的元素都大于 a[key]</span></div><div class="line">    exch(arr, lo, hi);</div><div class="line">&#125;</div><div class="line"></div><div class="line">    <span class="comment">// 将 key 值替换为 hi 的值，hi 成为切分点，即 key</span></div><div class="line">    exch(arr, key, hi);</div><div class="line">    <span class="keyword">return</span> hi;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exch</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> temp = arr[i];</div><div class="line">    arr[i] = arr[j];</div><div class="line">    arr[j] = temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><ul>
+<li><strong>this</strong> : 表示对自身所属对象的引用。每个函数内部都有一个隐藏的 <code>this</code> ，它指示的是所属函数的地址值，因此可以通过这个 <code>this</code> 来访问类的成员变量。<ol>
+<li>作用一：区分成员变量与局部变量。</li>
+<li>作用二：调用本类构造函数（必须放在第一行）。</li>
+<li>作用三：返回自身的引用，构成引用链（构造者模式）。</li>
+</ol>
+</li>
+<li><strong>static</strong> : 被 <code>static</code> 修饰的函数或成员变量保存在方法区中，它随着类的加载而在方法区中开辟空间，因此不需要创建对象即可以通过类名直接进行调用。由于这种特点，因此 <code>static</code> 内部不能包含与对象创建后才拥有的属性，例如 <code>this</code> ，成员变量，成员函数等。</li>
+<li><strong>final</strong> : 最终的，最后的。被修饰的类不可继承，变量不可改变（相当于常量），修饰的函数不可以在子类中进行复写，但可以在子类中直接调用。</li>
+<li><strong>abstract</strong> : 抽象，被 <code>abstract</code> 修饰的类与函数需要子类继承与重写后才有实际作用，由于这种特性，因此该关键字不能与 <code>private</code> 与 <code>final</code> 共存。</li>
+</ul>
+<h2 id="封装继承多态"><a href="#封装继承多态" class="headerlink" title="封装继承多态"></a>封装继承多态</h2><ul>
+<li><strong>封装</strong> : 隐藏类中成员属性的细节，外界不可以直接访问，必须通过 <code>set()</code> 与 <code>get()</code> 方法才能进行访问，它能使类变得更安全与易于管理。</li>
+<li><strong>继承</strong> : 一个类继承另一个类，如果父类是抽象类，那么必须实现父类中的所有抽象方法，继承用于描述一类事物。</li>
+<li><strong>多态</strong> : 成员变量与静态成员函数看父类，只有成员函数先看子类，子类没有的话就运行父类中的，如果父类也没有，那么就会在编译时就抛出异常。</li>
+</ul>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><p>内部类是表示一个类中的类，它用于描述一个类的附属信息，可以定义在成员位置或成员函数内部，这个类外界不能直接直接访问，必须用 <code>new Outer().new Inner()</code> 来访问。不过，当内部类的修饰符为 <code>static</code> 时，由于在加载时就已经保存在方法区了，因此可以通过 <code>new Outer.Inner()</code> 来创建对象。</p>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>异常用于描述在程序编译或执行过程中可能会发生的错误信息。</p>
+<ul>
+<li><strong>异常的分类</strong></li>
+</ul>
+<p><img src=".\img\异常.png" alt="异常的分类"></p>
+<ul>
+<li><p><strong>自定义异常</strong>：自定义异常内部不需要任何实现，只需要实现构造方法即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class MyException extends <span class="title">RuntimeExcepiton</span><span class="params">()</span> </span>&#123;</div><div class="line">    MyException(String msg) &#123;</div><div class="line">        <span class="keyword">super</span>(msg);</div><div class="line">        ...</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>throw</code> 与 <code>throws</code> ：</p>
+<ul>
+<li><strong>throw</strong> : 抛出异常，函数体中。抛出的是编译时异常后必须在函数名进行声明（即 <code>throws</code> ） 或直接捕获。</li>
+<li><strong>throws</strong> : 声明异常，函数名上。调用或者继承有异常声明的函数或类必须捕获或继续声明该异常。</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><img src=".\img\转换.png" alt="三者转换"></p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合可以说是 Java 语言中最令人兴奋的特性之一了，同样是存储数据，它的作用比一般的数组要强大的多，长度可变，各种富有特性的函数更是让对数据的操作更为便利与简单。</p>
+<ul>
+<li><p>集合继承体系图</p>
+<p><img src=".\img\集合体系.png" alt="集合体系图"></p>
+<ul>
+<li><p><strong>collction</strong> : 属于单列集合的顶级接口，实现类都可以进行 <code>iterator</code> 迭代,线程不安全（<code>Vector</code> 安全）。</p>
+<p>​        |—- <strong>List</strong> : 存取有序。有索引，可包含重复元素。</p>
+<p>​        |—- <em>ArrayList</em> : 底层数据结构是数组，增删慢，查询快。</p>
+<p>​        |—- <em>LinkedList</em> : 底层数据结构是链表，增删快，查询慢。</p>
+<p>​        |—- <em>Vector</em> （几乎不用）: 底层结构是数组，增删查询都慢。</p>
+<p>​        |—- <strong>set</strong> : 存取无序（<code>LinkedHashSet</code> 有序），不包含重复元素，可以存 <code>null</code> 元素，无索引。</p>
+<p>​        |—- <em>HashSet</em> : 底层数据结构是哈希表（实际上是 <code>HashMap</code> 实例），如果是引用对象则需要复写 <code>hashCode()</code> 与 <code>equals()</code> 。</p>
+<p>​        |—- <em>TreeSet</em> : 底层数据结构是红黑树，存储的时候按照自然排序或者传入的 <code>comparator</code> 进行比较排序 。</p>
+<p>​        |—- <em>LinkedHashSet</em> : 可预知迭代顺序，链表保存插入顺序，<code>Hash</code> 表保存数据。它通常用于保存一份已知 <code>Set</code> 集合的副本，使这个副本的迭代顺序与插入顺序相同。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>Map</strong> : 属于双列集合的顶级接口，键值对存储。不可以直接迭代，必须先生成 <code>Collection</code> 集合然后再遍历。线程不安全（<code>HashTable</code> 安全）。</p>
+<p>​    |—- <em>HashMap</em> : 基于 <code>Hash</code> 表，主要作用在键，保证键唯一    。</p>
+<p>​    |—- <em>TreeMap</em> : 基于红黑树，按自然順序或者傳入的 <code>comparator</code> 來保证 <code>Map</code> 中元素的迭代順序。</p>
+<p>​    |—- <em>LinkedHashMap</em> : 特性同 <code>LinkedHashSet</code> 。</p>
+<p>​    |—- <em>HashTable</em> （几乎不用） : 线程安全，不允许 <code>null</code> 元素。</p>
+<p>​</p>
+</li>
+</ul>
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li><p><strong>File</strong> : 文件和目录路径名的抽象表现形式，相当于将指定路径的文件或文件夹封装成一个类，方便对其进行操作。</p>
+<p>​    |—- <code>delete()</code> : 删除文件或文件夹，不走回收站，当且仅当文件夹为空时才能进行删除。</p>
+<p>​    |—- <code>createNewFile()</code> : 将封装的文件路径在硬盘上创建对应的文件，指定文件存在返回 <code>false</code> 。</p>
+<p>​    |—- <code>listFiles()</code> : 返回调用对象内的所有文件与文件夹，当对象为文件或发生 I/O 错误返回 <code>null</code> 。</p>
+<p>​    |—- <code>isFile()</code> : 判断调用对象时否为文件, <code>isDirectory()</code> 判断调用是否为文件夹。</p>
+<p>​    |—- <code>FileFilter</code> : 文件过滤器， <code>accept(File pathName)</code> 函数内来过滤该指定文件名的文件。</p>
+</li>
+<li><p><strong>流</strong></p>
+<p>​    |—- <strong>InputStream</strong>: 以字节为单位来进行读数据的抽象类。</p>
+<p>​        |—- <em>FileInputStream</em> :文件字节输入流</p>
+<p>​        |—- <em>ObjectInputStream</em> : 序列化对象输入流，本身不具备读能力</p>
+<p>​            |—- <code>ObjectInputStream(InputStream in)</code> : 接受一个 <code>InputStream</code> 对象，通过该对象从持久化设备中的读取数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ObjectInputStream oin = <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">"..."</span>));</div><div class="line">Object obj = oin.readObject();</div></pre></td></tr></table></figure>
+<p>​        |—- <em>FilterInputStream</em> : 本身不具备读能力，通过对传入的 <code>InputStream</code> 进行一些装饰（装饰者模式），提高</p>
+<p><code>InputStream</code> 的读能力</p>
+<p>​            |—- <em>BufferedInputStream</em> : 缓冲输入流，内部有一个缓冲数组，用于暂存读入的数据。</p>
+<p>​    |—- <strong>OutputStream</strong>: 以字节为单位来进行读数据。</p>
+<p>​        |—- <em>FileOutputStream</em> :文件字节输出流</p>
+<p>​        |—- <em>ObjectOutputStream</em> : 序列化对象输出流，本身不具备写能力</p>
+<p>​            |—- <code>ObjectOutputStream(OutputStream out)</code> : 接受一个 <code>OutputStream</code> 对象，并通过该对象向持久化设备写入数据。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">"..."</span>));</div><div class="line">oos.writeObject(<span class="keyword">new</span> Object());</div></pre></td></tr></table></figure>
+<p>​        |—- <em>FilterOutputStream</em> : 本身不具备读能力，通过对传入的 <code>OutputStream</code> 进行一些装饰（装饰者模式），提高 <code>OutputStream</code> 的读能力</p>
+<p>​            |—- <em>BufferedOutputStream</em> : 缓冲输出流，内部有一个缓冲数组，用于暂存写入的数据。</p>
+<p>​            |—- <em>PrintStream</em> : 字节打印流，永远不会抛出 <code>IOException</code></p>
+<p>​    |—- <strong>Reader</strong> : 以字符为单位来进行读数据的抽象类</p>
+<p>​        |—- <em>InputStreamReader</em> : 字符流与字节流之间的输入转换流</p>
+<p>​            |—- <em>FileReader</em> : 文件字符输入流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 接收一个输入字节流对象与编码表字符串，转换成指定字符集的 Reader 对象。</span></div><div class="line">Reader rd = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"..."</span>), <span class="string">"utf-8"</span>);</div></pre></td></tr></table></figure>
+<p>​    |—- <strong>Writer</strong> : 以字符为单位来进行写数据的抽象类</p>
+<p>​        |—- <em>OutputStreamWriter</em>: 字符流与字节流之间的输出转换流</p>
+<p>​        |—- <em>FileWriter</em> : 文件字符输出流        </p>
+<p>​        |—- <em>PrintWriter</em> : 打印流，向网络、文件、控制台打印数据，只能打印 <code>char</code> 类型数组，其他类型的数组会直接打印其地址值，需要开启自动刷新，且需要调用 <code>println()</code> <code>printf()</code> <code>format()</code> 三个函数之间一个才会刷新。该方法永远不会抛出 <code>IOException</code> 。</p>
+</li>
+<li><p><strong>IO 异常模板</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">FileOutputStream fos = <span class="keyword">null</span>;</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    fos = <span class="keyword">new</span> FileOutputStream(<span class="string">"d:\\test.txt"</span>);</div><div class="line">  	...</div><div class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">  	e.printStackTrace();</div><div class="line">&#125; <span class="keyword">finally</span> &#123;</div><div class="line">  	<span class="keyword">try</span> &#123;</div><div class="line">      	fos.close()</div><div class="line">  	&#125; <span class="keyword">catch</span> (IOException e1) &#123;</div><div class="line">      	e1.printStackTrace();</div><div class="line">  	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>线程是并发的基础，线程可以让程序在同一时间段“并发”的运行两个任务。JVM 启动后至少运行了两条线程，一条主线程，一条垃圾回收线程。</p>
+<h3 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h3><ol>
+<li><p>继承 <code>Thread</code> 类，复写 <code>run()</code> 方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> MyThread.start();</div></pre></td></tr></table></figure>
+</li>
+<li><p>实现 <code>Runable</code> 接口，复写 <code>run()</code> 方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 可以将任务类放置在多个线程中并发运行</span></div><div class="line">Task task = <span class="keyword">new</span> Task();</div><div class="line"><span class="keyword">new</span> Thread(task).start();</div><div class="line"><span class="keyword">new</span> Thread(task).start();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="线程的控制"><a href="#线程的控制" class="headerlink" title="线程的控制"></a>线程的控制</h3><p>​    |—- <code>setPriority()</code> : 设置线程的优先级（概率事件）</p>
+<p>​    |—- <code>sleep(long time)</code> : 线程休眠指定时长</p>
+<p>​    |—- <code>join()</code> : 加入线程，相当于插队，该线程执行完其他线程才可以继续运行</p>
+<p>​    |—- <code>yield()</code> :  线程礼让，与 <code>sleep</code> 类似，但时间随机</p>
+<h3 id="同步锁"><a href="#同步锁" class="headerlink" title="同步锁"></a>同步锁</h3><ul>
+<li><p><strong><em>synchronize</em></strong> : 代码同步块，该关键字通过某个对象锁可以锁住一段代码块或者一个方法，这个锁对象必须唯一，当要锁住是代码块时，使用 <code>new Object()</code>  充当锁对象，是非静态方法时，锁对象默认为 <code>this</code> 。而在静态方法时，锁对象可以指定为类名.class。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 同步代码块</span></div><div class="line">Object obj = <span class="keyword">new</span> Object();</div><div class="line">synchronize(obj) &#123;&#125;</div><div class="line"><span class="comment">// 同步非静态方法</span></div><div class="line"><span class="function"><span class="keyword">public</span> synchronize <span class="keyword">void</span> <span class="title">love</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line"><span class="comment">// 同步静态方法</span></div><div class="line"><span class="function"><span class="keyword">public</span> synchronize <span class="keyword">void</span> <span class="title">love</span><span class="params">()</span> </span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>lock</em></strong> : 锁接口，可以直接锁住一段代码块而不需要锁对象，因为它本身就相当于一把锁。它支持多个支持休眠与唤醒线程的 <code>condition</code> 对象。</p>
+<p>​    |—- <code>newCondition()</code> : 获取一个 <code>condition</code> 对象，该对象可以休眠与唤醒线程，但能且只能唤醒是自己所休眠的线程，而不能唤醒其他 <code>condition</code> 对象休眠的线程。</p>
+</li>
+</ul>
+<h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3><ul>
+<li><p><strong><em>ExecutorService</em></strong>: 线程池实现接口</p>
+<p>​    |—-  <code>Executors.newCachedThreadPool()</code> : 通过 <code>Executors</code> 工具类来获得一个可缓存的线程池对象，该对象是一个 <code>ExecutorService</code> 的实现类，获得的线程池对象可以保存使用过的线程，当线程池中没有线程时就创建线程，当有时就直接返回已缓存的线程对象。</p>
+<p>​    |—- <code>Executors.newFixedThreadPool()</code> : 通过 <code>Executors</code> 工具类来获得一个固定线程数的线程池对象，该对象是一个 <code>ExecutorService</code> 的实现类。</p>
+</li>
+<li><p><strong>常见实现</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Task task = <span class="keyword">new</span> Task();<span class="comment">// 已实现 Runnable 接口</span></div><div class="line">ExecutorService pool = Executors.newFixedThreadPool(<span class="number">4</span>);</div><div class="line">pool.execute(task);</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>利用程序进行网络数据的传送与接收，最重要的三个元素：IP、端口、协议。</p>
+<h3 id="InetAddress"><a href="#InetAddress" class="headerlink" title="InetAddress"></a>InetAddress</h3><p>​    |—- <code>getAllByName()</code> : 获取指定主机名下的所有 IP 地址</p>
+<p>​    |—- <code>getByName()</code> : 在给定主机名的情况下获取主机的 IP 地址</p>
+<h3 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h3><p>网络通信实际上就是 <code>Socket</code> 之间的通信，通信两端都具有一个 <code>Socket</code> ，数据通过 I/O 技术在两个 <code>Socket</code> 之间进行传输。可以通过 <code>Socket</code> 封装目标 IP 与端口进行数据的传输。</p>
+<p>​    |—- <code>Socket(InetAddress address, int port)</code> : 将创建的 <code>Socket</code> 对象绑定到指定的目标 IP 与端口。</p>
+<h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><p>UDP 是无连接的一种通信方式，发送数据前不需要先进行连接，类似于现实生活中的发送快递，先创建一个数据包，然后获得一个发送对象，发送该数据包。</p>
+<ul>
+<li><p><strong>DatagramPacket</strong> </p>
+<p>​    |—- <code>DatagramPacket(byte[] buf, int offset, int length, InetAddress address, int port)</code> : 发送数据报包，包含数据发送的目标 IP 与端口，该报包可以携带一个指定偏移量字节数组的数据，但偏移数组容量最大不能超过 64kB。</p>
+<p>​    |—- <code>DatagramPacket(byte[] buf, int length)</code> : 接收数据报包，接收一个接收数组与数组长度，将接收的数据保存到接收到的字节数组中。</p>
+</li>
+<li><p><strong>DatagramSocket</strong></p>
+<p>​    |—- <code>DatagramSocket()</code>  : 创建一个随机端口的 <code>DatagramSocket</code> 对象。</p>
+<p>​    |—- <code>DatagramSocket(int port)</code>  : 创建一个监听指定端口的 <code>DatagramSocket</code> 对象。</p>
+<p>​    |—- <code>send(DatagramPacket p)</code> : 接收一个数据报包，发送到报包指定的目标主机与端口。</p>
+<p>​    |—- <code>receive(DatagramPacket p)</code>  : 将从 <code>DatagramSocket</code> 接收对象中接收的数据报包对象保存到指定的数据报包中。</p>
+</li>
+<li><p><strong>常见实现</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 发送数据</span></div><div class="line"><span class="keyword">byte</span>[] b = <span class="string">"lmovse"</span>.getBytes();</div><div class="line">DatagramPacket dp = <span class="keyword">new</span> DatagramPacket(b, b.lenth, InetAddress.getByName(<span class="string">"192.168.46.11"</span>), <span class="number">8080</span>);</div><div class="line">DatagramSocket ds = <span class="keyword">new</span> DatagramSocket();</div><div class="line">ds.send(dp);</div><div class="line">ds.close();</div><div class="line"></div><div class="line"><span class="comment">// 接收数据</span></div><div class="line"><span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">DatagramPacket dp = <span class="keyword">new</span> DatagramPacket(b, b.lenth());</div><div class="line">DatagramSocket ds = <span class="keyword">new</span> DatagramSocket(<span class="number">8080</span>);</div><div class="line">ds.receive(dp);</div><div class="line"><span class="keyword">byte</span>[] data = dp.getData();</div><div class="line">System.out.print(<span class="keyword">new</span> String(data));<span class="comment">// lmovse</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><p>TCP 是面向连接的通信方式，它在进行数据传输前必须先进行通信双方的连接，因此需要进行三次握手，所以效率较低，不过安全可靠，且发送数据没有大小限制。</p>
+<ul>
+<li><p><strong>Socket</strong> </p>
+<p>​    |—- <code>Socket(InetAddress address, int port)</code> : 将创建的 <code>Socket</code> 对象绑定到指定的目标 IP 与端口。</p>
+<p>​    |—- <code>getInputStream()</code> : 获取输入流，读取数据</p>
+<p>​    |—- <code>getOutputStream()</code> : 获取输出流，输出数据</p>
+<p>​    |—- <code>shutDownOutput()</code> : 结束输出流的输出，用于给服务度一个结束标志，终止服务端的阻塞状态</p>
+</li>
+<li><p><strong>ServerSocket</strong> </p>
+<p>​    |—- <code>ServerSocket(int port)</code> : 创建一个监听指定主机端口的 <code>ServerSocket</code> 对象。</p>
+<p>​    |—- <code>accept()</code> : 返回一个可读写数据的 <code>Socket</code> 对象。</p>
+</li>
+<li><p><strong>常见实现</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 发送数据</span></div><div class="line">ServerSocket ss = <span class="keyword">new</span> ServerSocket(<span class="number">8080</span>);</div><div class="line">Socket s = ss.accept();</div><div class="line">BufferedOutputStream bos = <span class="keyword">new</span> BufferedOutputStream(s.getOutputStream());</div><div class="line">...</div><div class="line">s.shoutDownOutput();</div><div class="line"></div><div class="line"><span class="comment">// 读取数据</span></div><div class="line">Socket socket = <span class="keyword">new</span> Socket(<span class="string">"192.168.4.1"</span>, <span class="number">8080</span>);</div><div class="line">BufferedInputStream bis = <span class="keyword">new</span> BufferedInputStream(socket.getInputStream());</div><div class="line">...</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><ul>
+<li><p>URL网络的统一资源定位符，即网址，该对象可以封装一个网址，并进行连接。</p>
+<p>​    |—- <code>URL(String spec)</code> : 创建指定域名的 URL 对象</p>
+<p>​    |—- <code>openConnection()</code> : 打开连接，返回一个 <code>connection</code> 对象，这个对象代表着应用程序与对应 URL 之间的通信连接，可以通过它来获取双方通信用的输入输出流。</p>
+<p>​    |—- <code>openStream()</code> : 打开连接，打开输入流，返回一个 <code>InputStream</code> 对象</p>
+</li>
+<li><p><strong>常见实现</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">InputStream in = <span class="keyword">new</span> URL(<span class="string">"lmovse.info"</span>).openStream();</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>反射是一种用于在运行时操作类信息的技术，通过反射可以在运行时动态的改变某个类的状态。反射的是基于字节码对象实现的，当某个类被加载时，在内存的方法区中就会有这个某的字节码对象，即 <code>Class</code> 对象，这个对象包含这个类的所有类型信息，包括所有的字段、构造函数、成员方法等。</p>
+<h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><ul>
+<li><p>获取 <code>Class</code> 对象的三种方法</p>
+<p>​    |—- <code>Class.forName(&quot;...&quot;)</code> : 通过某个类的完整类名来获取</p>
+<p>​    |—- <code>obj.getClass()</code> : 通过对象继承之 <code>Object</code> 的 <code>getClass()</code> 方法来获取</p>
+<p>​    |—- <code>Obj.class</code> : 通过类名.class 来获取</p>
+</li>
+<li><p>反射的主要方法</p>
+<p>​    |—- <code>getConstructor(Clas&lt;?&gt;... parametertype)</code> : 通过具体的参数字节码对象信息获取对应的构造函数</p>
+<p>​    |—- <code>getMethod(String name, Class&lt;?&gt;... parametertype)</code> : 通过方法名以及具体的参数字节码对象信息获取对应的方法</p>
+<p>​    |—- <code>getField(String name)</code> : 通过字段名来获取对应的字段</p>
+<p>​    |—- <code>getClassLoader()</code> : 获取类的加载器对象</p>
+</li>
+</ul>
+<h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><p>代理模式是反射的一个很好的应用，通过反射技术，可以实现适应多场景且操作十分方便的动态代理。要注意的是，<code>Proxy</code> 是基于接口的动态代理，也就是或某个类要实现多态代理，那么他们必须是实现同一接口而非同一抽象父类。</p>
+<p>​    |—- <code>newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h)</code> : 通过指定的 <code>handler</code> 来生成某个对象的代理对象，返回该对象的代理对象。</p>
+<p>​    |—- <code>invoke(Object proxy, Method method, Object[] args)</code> : 实现自定义 <code>handler</code> 时要完成的方法，该方法可以在指定方法运行前做一些附加操作，也可以称其为实际方法的代理方法。</p>
+<h3 id="常见实现"><a href="#常见实现" class="headerlink" title="常见实现"></a>常见实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 对 constructor 的操作</span></div><div class="line">Class&lt;?&gt; clazz = Class.forName(<span class="string">"com.lmovse.Love"</span>);</div><div class="line">Constructor con = clazz.getConstructor(Integer.class);</div><div class="line"><span class="comment">// 通过构造函数的字节码对象的 newInstance() 方法创建 Love 类的对象</span></div><div class="line">Love love = (Love) con.newInstance();</div><div class="line">Method method = clazz.getMethod(<span class="string">"loveSheng"</span>, Integer.class);</div><div class="line"><span class="comment">// 通过方法的字节码对象的 invoke() 方法调用对象的该方法，并传入具体的实参</span></div><div class="line">method.invoke(love, <span class="number">10000</span>);</div><div class="line">Field field = clazz.getField(<span class="string">"year"</span>);</div><div class="line"><span class="comment">// 通过字段字节码对象的 set() 方法改变某个对象的字段信息</span></div><div class="line">field.set(love, <span class="number">10000</span>);</div><div class="line"></div><div class="line"><span class="comment">// 假设 Love 类实现 Sunshine 接口</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</div><div class="line">  	<span class="keyword">private</span> Object obj;</div><div class="line">  	<span class="comment">// 传入要代理的对象</span></div><div class="line">  	MyHandler(Object obj) &#123;</div><div class="line">   	 <span class="keyword">this</span>.obj = obj;</div><div class="line">  	&#125;</div><div class="line">  	<span class="function"><span class="keyword">public</span> Object <span class="title">getProxy</span><span class="params">(obj.getClass.getClassLoader()</span>, obj.getClass.<span class="title">getInterface</span><span class="params">()</span>, <span class="keyword">this</span>)</span>;</div><div class="line">    <span class="comment">// 调用要代理的方法及传入的参数</span></div><div class="line">  	<span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> </span>&#123;</div><div class="line">    	System.out.println(<span class="string">"代理前进行的操作"</span>);</div><div class="line">      	Object object =  method.invoke(obj, args);</div><div class="line">      	System.out.println(<span class="string">"代理后进行的操作"</span>);</div><div class="line">      	<span class="keyword">return</span> object;</div><div class="line"> 	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 对 love 进行代理</span></div><div class="line">Sunshine sun = (Sunshine) <span class="keyword">new</span> MyHandler(<span class="keyword">this</span>).getProxy();</div><div class="line">sun.love();</div></pre></td></tr></table></figure>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'http://lmovse.info/2017/04/24/JavaSE-总览/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//lmovse.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/28/Hi/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/material-1.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="lmovse's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        hmilyssy@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/u/5165095851" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/lmovse" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;lmovse
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    <script src="/js/smoothscroll.js"></script>
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
